@@ -24,6 +24,10 @@ ul {
 
 /* Menu */
 
+.hamburgerMenu {
+  display: none;
+}
+
 .topMenu {
   width: 100%;
   height: 150px;
@@ -32,7 +36,10 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .topMenu::after {
@@ -44,6 +51,11 @@ ul {
   width: 1600px;
   background: #AC2A2A;
   height: 1px;
+}
+
+.topMenu__logo__button {
+  background: transparent;
+  cursor: pointer;
 }
 
 .topMenu__logo {
@@ -58,7 +70,7 @@ ul {
 .topMenu__item {
   margin: 0 40px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 17px;
   transition: .2s all;
   cursor: pointer;
 }
@@ -69,6 +81,45 @@ ul {
 
 .topMenu__item:last-child {
   margin-right: 0;
+}
+
+.topMenuMobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #E1E1E1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  transform: scaleY(0);
+  transition: .4s all;
+  transform-origin: top;
+}
+
+.topMenuMobile__list {
+  transition: .4s all;
+  opacity: 0;
+}
+
+.topMenuMobile__list .topMenu__item {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.topMenuMobile__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: .4s all;
+  opacity: 0;
+}
+
+.topMenuMobile__close__img {
+  width: 30px;
+  height: 30px;
 }
 
 /* Landing */
@@ -116,12 +167,50 @@ ul {
   bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 36px;
-  color: #fff;
   padding: 0 40px;
   display: flex;
   align-items: center;
-  border: 1px solid #000;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.landing__header__header {
+  font-size: 36px;
+  color: #fff;
+}
+
+.landing__header__oferta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing__oferta__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 45px;
+}
+
+.landing__oferta__item__imgWrapper {
+  border: 2px solid #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing__oferta__item__img {
+  width: 32px;
+  height: 32px;
+}
+
+.landing__oferta__item__header {
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
 }
 
 /* Oferta */
@@ -129,4 +218,83 @@ ul {
 .oferta {
   min-height: 300px;
   background: #000;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+#oferta {
+  position: absolute;
+  top: -250px;
+  left: 0;
+  background: transparent;
+}
+
+.oferta__section {
+  padding: 100px 0 20px;
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.oferta__header {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 36px;
+  border-bottom: 1px solid #AC2A2A;
+  padding-bottom: 4px;
+  color: #fff;
+  width: fit-content;
+}
+
+.oferta__subsection {
+  width: 100%;
+  padding: 90px 0 60px 100px;
+  border-left: 1px solid #8B8B8B;
+  color: #fff;
+  position: relative;
+  opacity: 0;
+}
+
+.oferta__subsection::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 3px;
+  background: #fff;
+  height: 130px;
+}
+
+.oferta__subsection::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  width: calc(100% - 100px);
+  height: 1px;
+  background: #AC2A2A;
+}
+
+.oferta__subsection__header {
+  font-size: 26px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.oferta__subsection__text {
+  text-align: justify;
+  font-size: 17px;
+}
+
+.oferta__subsection__number {
+  position: absolute;
+  top: 50%;
+  left: -45px;
+  transform: translateY(-50%);
+  font-size: 100px;
+  color: rgba(255, 255, 255, .15);
+}
+
+.oferta__subsection:last-child::after {
+  display: none;
 }
