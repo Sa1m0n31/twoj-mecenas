@@ -1,0 +1,132 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button, a, input {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Menu */
+
+.topMenu {
+  width: 100%;
+  height: 150px;
+  background: #E1E1E1;
+  padding: 0 calc((100vw - 1600px) / 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.topMenu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1600px;
+  background: #AC2A2A;
+  height: 1px;
+}
+
+.topMenu__logo {
+  width: 311px;
+  height: 82px;
+}
+
+.topMenu__list {
+  display: flex;
+}
+
+.topMenu__item {
+  margin: 0 40px;
+  font-weight: 700;
+  font-size: 20px;
+  transition: .2s all;
+  cursor: pointer;
+}
+
+.topMenu__item:hover {
+  color: #AC2A2A;
+}
+
+.topMenu__item:last-child {
+  margin-right: 0;
+}
+
+/* Landing */
+
+.landing {
+  padding-top: 40px;
+  position: relative;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: #E1E1E1;
+  z-index: -1;
+  border-bottom: 2px solid #AC2A2A;
+}
+
+.landing::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: #000;
+  z-index: -1;
+}
+
+.landing__img {
+  display: block;
+  margin: 0 auto;
+  width: 1600px;
+  height: auto;
+}
+
+.landing__header {
+  width: 70%;
+  height: 130px;
+  background: #AC2A2A;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 36px;
+  color: #fff;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+/* Oferta */
+
+.oferta {
+  min-height: 300px;
+  background: #000;
+}
