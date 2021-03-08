@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-import landing from './../static/img/twojmecenas-hero.jpg'
+import landing from './../static/img/twojmecenas-hero.png'
 
 import odszkodowania from '../static/img/odszkodowania.svg'
 import prawoKarne from '../static/img/prawo-karne.svg'

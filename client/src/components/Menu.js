@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import logo from './../static/img/twojmecenas-logo.png'
 import close from './../static/img/close.png'
 
-const Menu = () => {
+const Menu = ({backToFront}) => {
     let mobileMenu = useRef(null);
     let mobileList = useRef(null);
     let mobileExit = useRef(null);
@@ -28,7 +28,13 @@ const Menu = () => {
         let goToElement;
         switch(n) {
             case 0:
-                goToElement = document.querySelector("body");
+                if(backToFront) {
+                    window.location.href = "/";
+                    return 0;
+                }
+                else {
+                    goToElement = document.querySelector("body");
+                }
                 break;
             case 1:
                 goToElement = document.querySelector("#oferta");
@@ -57,7 +63,7 @@ const Menu = () => {
     }
 
     return <menu className="topMenu">
-        <button className="topMenu__logo__button" onClick={() => goTo(0)}>
+        <button className="topMenu__logo__button" onClick={() => goTo(0)} >
             <img className="topMenu__logo" src={logo} alt="twoj-mecenas" />
         </button>
 

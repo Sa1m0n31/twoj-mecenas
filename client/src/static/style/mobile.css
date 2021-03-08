@@ -14,6 +14,11 @@
     .topMenu::after {
         width: 90%;
     }
+
+    .oferta__item {
+        width: 30%;
+        margin: 0 0 40px;
+    }
 }
 
 @media(max-width: 1500px) {
@@ -28,8 +33,17 @@
         margin: 0 auto;
     }
 
-    .oferta__section {
-        width: 85%;
+    .oferta {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+
+    .oNas__section__header {
+        font-size: 22px;
+    }
+
+    .oNas__section__text {
+        font-size: 15px;
     }
 }
 
@@ -72,19 +86,42 @@
     .landing__header {
         height: 80px;
     }
+
+    .footer {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .oferta__item__header {
+        font-size: 17px;
+    }
+
+    .oferta__item__text {
+        font-size: 14px;
+    }
+
+    .oNasInner {
+        width: 85%;
+    }
+
+    .oNasInner::after, .oNasInner::before {
+        left: -9%;
+        width: calc(100vw - 15px);
+    }
 }
 
 @media(max-width: 900px) {
-    .oferta__section {
-        width: 90%;
-    }
-
     .landing__header, .topMenu__list {
         display: none;
     }
 
     .topMenuMobile {
         display: flex;
+    }
+
+    .oferta__section {
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 
     .hamburgerMenu {
@@ -101,11 +138,59 @@
         height: 2px;
         background: #000;
     }
+
+    .footer__header {
+        font-size: 18px;
+    }
+
+    .footer__contact {
+        margin: 15px 0;
+    }
+
+    .footer__contact__data {
+        font-size: 13px;
+    }
+
+    .oferta__item {
+        width: 45%;
+    }
+
+    .ofertaMobile__header {
+        width: 100%;
+        display: block;
+        margin-bottom: 50px;
+        text-align: center;
+        color: #fff;
+        font-size: 26px;
+    }
+
+    .oferta {
+        padding-top: 70px;
+    }
+}
+
+@media(max-width: 800px) {
+    .kontakt__header, .potwierdzenie__text {
+        font-size: 26px;
+        padding: 0 20px;
+    }
+
+    .potwierdzenie {
+        width: 90%;
+    }
+
+    .contactForm {
+        width: 90%;
+    }
+
+    .formaKontaktu * {
+        font-size: 13px;
+    }
 }
 
 @media(max-width: 700px) {
     .oferta__section {
-        padding: 20px 0;
+        padding: 20px 5vw;
     }
 
     .oferta__subsection {
@@ -138,11 +223,123 @@
         font-size: 60px;
         left: -10px;
     }
+
+    .footerCol {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer__contact {
+        margin: 5px 0 10px;
+    }
+
+    .footer__header {
+        margin-bottom: 0;
+    }
+
+    .oferta__item {
+        width: 90%;
+    }
+
+    .oNasInner {
+        padding: 25px;
+    }
+
+    .formaKontaktu {
+        flex-wrap: wrap;
+    }
+
+    .formaKontaktu__header {
+        width: 100%;
+        margin-bottom: 25px;
+    }
 }
 
 @media(max-width: 600px) {
     .topMenu__logo {
         width: 190px;
         height: auto;
+    }
+
+    .opinie__item {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .opinie__text, .opinie__author {
+        font-size: 14px;
+    }
+
+    .opinie__header {
+        margin-bottom: 10px;
+    }
+
+    .kontakt__header {
+        font-size: 18px;
+    }
+
+    .contactInput, .contactInputLabel {
+        height: 40px;
+    }
+
+    .contactTextareaLabel, .contactTextarea {
+        height: 200px;
+    }
+
+    .kontakt {
+        padding-bottom: 40px;
+    }
+
+    .opinie {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    .oferta__item__button {
+        width: 80%;
+    }
+}
+
+@media(max-width: 500px) {
+    .oferta__item {
+        width: 100%;
+        padding: 30px 15px;
+    }
+
+    .oNas__section__header {
+        font-size: 18px;
+    }
+
+    .oNas__section__text {
+        font-size: 14px;
+    }
+
+    .contactInputLabel {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .contactInput {
+        border-width: 2px;
+    }
+
+    .potwierdzenie__text {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 400px) {
+    .formaKontaktu label {
+        margin-bottom: 15px;
+    }
+
+    .formaKontaktu label:last-of-type {
+        margin-right: 0;
+    }
+
+    .formaKontaktu__button {
+        margin-right: 8px;
+        width: 25px;
+        height: 25px;
     }
 }
