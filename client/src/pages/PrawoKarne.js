@@ -49,7 +49,7 @@ const PrawoKarne = () => {
 
             <section className="oferta__subsection" ref={o7} id="o7">
                 <h4 className="oferta__subsection__header">
-                    postępowanie przygotowawcze
+                    Postępowanie przygotowawcze
                     <span className="oferta__subsection__number">
                         a)
                     </span>
@@ -73,7 +73,7 @@ const PrawoKarne = () => {
 
             <section className="oferta__subsection" ref={o8} id="o8">
                 <h4 className="oferta__subsection__header">
-                    postępowanie sądowe
+                    Postępowanie sądowe
                     <span className="oferta__subsection__number">
                         b)
                     </span>
@@ -101,7 +101,7 @@ const PrawoKarne = () => {
 
             <section className="oferta__subsection" ref={o9} id="o9">
                 <h4 className="oferta__subsection__header">
-                    postępowanie wykonawcze
+                    Postępowanie wykonawcze
                     <span className="oferta__subsection__number">
                         c)
                     </span>
@@ -125,7 +125,7 @@ const PrawoKarne = () => {
 
             <section className="oferta__subsection" ref={o10} id="o10">
                 <h4 className="oferta__subsection__header">
-                    wyroki łączne
+                    Wyroki łączne
                     <span className="oferta__subsection__number">
                         d)
                     </span>
@@ -141,7 +141,7 @@ const PrawoKarne = () => {
 
             <section className="oferta__subsection" ref={o11} id="o12">
                 <h4 className="oferta__subsection__header">
-                    wykroczenia
+                    Wykroczenia
                     <span className="oferta__subsection__number">
                         e)
                     </span>
@@ -159,7 +159,7 @@ const PrawoKarne = () => {
 
             <section className="oferta__subsection" ref={o13} id="o13">
                 <h4 className="oferta__subsection__header">
-                    przestępstwa i wykroczenia skarbowe
+                    Przestępstwa i wykroczenia skarbowe
                     <span className="oferta__subsection__number">
                         f)
                     </span>

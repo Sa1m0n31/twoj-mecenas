@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
+
 import { useFormik } from "formik";
+import * as Yup from 'yup'
 
 import axios from 'axios'
 import { gsap, ScrollTrigger } from 'gsap/all';
@@ -9,6 +11,7 @@ import check from './../static/img/check.png'
 const Kontakt = () => {
     let [telefon, setTelefon] = useState(false);
     let [email, setEmail] = useState(false);
+    let [send, setSend] = useState(false);
 
     let kontakt = useRef(null);
     let kontaktHeader = useRef(null);
@@ -45,22 +48,58 @@ const Kontakt = () => {
             adresEmail: "",
             wiadomosc: ""
         },
+        validationSchema: Yup.object({
+            numerTelefonu: Yup.string()
+                .required('Required'),
+            adresEmail: Yup.string()
+                .email('Email')
+                .required('Required')
+
+        }),
         onSubmit: values => {
             //alert(JSON.stringify(values, null, 2));
+            setSend(true);
             afterSubmit();
+            formik.resetForm();
         }
     });
+
+    useEffect(() => {
+        if(send) {
+            console.log("error email");
+            console.log(formik.errors.adresEmail);
+        }
+    }, [formik.errors.adresEmail, send]);
 
     const afterSubmit = () => {
         const tl = gsap.timeline();
         tl.to(kontakt.current, { x: 2000, duration: .5 });
         tl.to(potwierdzenie.current, { opacity: 1, duration: .4 });
 
+        formik.initialValues = {
+            imie: "",
+            nazwisko: "",
+            numerTelefonu: "",
+            adresEmail: "",
+            wiadomosc: ""
+        }
+
         setTimeout(() => {
+            setSend(false);
             const tl2 = gsap.timeline();
             tl2.to(potwierdzenie.current, { opacity: 0, duration: .4 });
             tl2.fromTo(kontakt.current, { x: -2000 }, { x: 0, duration: .5 });
         }, 3000);
+    }
+
+    const checkSubmit = e => {
+        e.preventDefault();
+
+        if((formik.errors.adresEmail)||(formik.errors.numerTelefonu)) {
+            gsap.to(kontakt.current, { x: +-20, yoyo: true, repeat: 10, duration: .05 });
+            gsap.set(kontakt.current, { x:0 });
+        }
+        formik.handleSubmit();
     }
 
     return <section className="kontakt">
@@ -136,7 +175,7 @@ const Kontakt = () => {
                 </label>
             </div>
 
-            <button type="submit" className="submitBtn">
+            <button type="submit" className="submitBtn" onClick={(e) => checkSubmit(e) }>
                 Wyślij
             </button>
         </form>

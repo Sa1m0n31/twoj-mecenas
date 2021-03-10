@@ -49,7 +49,7 @@ const PrawoRodzinne = () => {
 
             <section className="oferta__subsection" ref={o14} id="o14">
                 <h4 className="oferta__subsection__header">
-                    rozwody
+                    Rozwody
                     <span className="oferta__subsection__number">
                         a)
                     </span>
@@ -65,7 +65,7 @@ const PrawoRodzinne = () => {
 
             <section className="oferta__subsection" ref={o15} id="o15">
                 <h4 className="oferta__subsection__header">
-                    alimenty
+                    Alimenty
                     <span className="oferta__subsection__number">
                         b)
                     </span>
@@ -89,7 +89,7 @@ const PrawoRodzinne = () => {
 
             <section className="oferta__subsection" ref={o16} id="o16">
                 <h4 className="oferta__subsection__header">
-                    władza rodzicielska
+                    Władza rodzicielska
                     <span className="oferta__subsection__number">
                         c)
                     </span>
@@ -110,7 +110,7 @@ const PrawoRodzinne = () => {
 
             <section className="oferta__subsection" ref={o17} id="o17">
                 <h4 className="oferta__subsection__header">
-                    miejsce pobytu dziecka
+                    Miejsce pobytu dziecka
                     <span className="oferta__subsection__number">
                         d)
                     </span>
@@ -124,7 +124,7 @@ const PrawoRodzinne = () => {
 
             <section className="oferta__subsection" ref={o18} id="o18">
                 <h4 className="oferta__subsection__header">
-                    kontakty
+                    Kontakty
                     <span className="oferta__subsection__number">
                         e)
                     </span>
@@ -145,7 +145,7 @@ const PrawoRodzinne = () => {
 
             <section className="oferta__subsection" ref={o19} id="o19">
                 <h4 className="oferta__subsection__header">
-                    ustalenie bądź zaprzeczenie ojcostwa
+                    Ustalenie bądź zaprzeczenie ojcostwa
                     <span className="oferta__subsection__number">
                         f)
                     </span>

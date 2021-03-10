@@ -17,15 +17,15 @@ const Landing = () => {
     const circle4 = useRef(null);
     const circle5 = useRef(null);
 
-    useEffect(() => {
-        let tl = gsap.timeline();
-        tl.to(circle1.current, { opacity: 1, duration: .5 });
-        tl.to(circle2.current, { opacity: 1, duration: .5 });
-        tl.to(circle3.current, { opacity: 1, duration: .5 });
-        tl.to(circle4.current, { opacity: 1, duration: .5 });
-        tl.to(circle5.current, { opacity: 1, duration: .5 });
-
-    }, []);
+    // useEffect(() => {
+    //     let tl = gsap.timeline();
+    //     tl.to(circle1.current, { opacity: 1, duration: .5 });
+    //     tl.to(circle2.current, { opacity: 1, duration: .5 });
+    //     tl.to(circle3.current, { opacity: 1, duration: .5 });
+    //     tl.to(circle4.current, { opacity: 1, duration: .5 });
+    //     tl.to(circle5.current, { opacity: 1, duration: .5 });
+    //
+    // }, []);
 
     return <div className="landing">
         <img className="landing__img" src={landing} alt="twoj-mecenas-oferta" />

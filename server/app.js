@@ -12,6 +12,9 @@ app.use(cors());
 
 /* Serve static React page */
 app.use(express.static(path.join(__dirname, '../client/build')));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 /* Send form */
 app.post("/send", async (req, res) => {

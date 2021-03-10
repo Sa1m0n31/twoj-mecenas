@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './static/style/style.css'
@@ -18,6 +18,20 @@ import ONas from "./components/ONas";
 import Opinie from "./components/Opinie";
 
 function App() {
+    useEffect(() => {
+        const topMenu = document.querySelector(".topMenu");
+        window.addEventListener("scroll", () => {
+            if(window.pageYOffset> 200) {
+                topMenu.classList.add("topMenu100");
+                console.log(100);
+            }
+            else {
+                console.log(0);
+                topMenu.classList.remove("topMenu100");
+            }
+        });
+    }, []);
+
   return (
       <div className="container">
           <Router>

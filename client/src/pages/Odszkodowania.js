@@ -49,7 +49,7 @@ const Odszkodowania = () => {
 
             <section className="oferta__subsection" ref={o1} id="o1">
                 <h4 className="oferta__subsection__header">
-                    wypadek komunikacyjny
+                    Wypadek komunikacyjny
                     <span className="oferta__subsection__number">
                         a)
                     </span>
@@ -61,7 +61,7 @@ const Odszkodowania = () => {
 
             <section className="oferta__subsection" ref={o2} id="o2">
                 <h4 className="oferta__subsection__header">
-                    obrażenia ciała
+                    Obrażenia ciała
                     <span className="oferta__subsection__number">
                         b)
                     </span>
@@ -73,7 +73,7 @@ const Odszkodowania = () => {
 
             <section className="oferta__subsection" ref={o3} id="o3">
                 <h4 className="oferta__subsection__header">
-                    śmierć osoby bliskiej
+                    Śmierć osoby bliskiej
                     <span className="oferta__subsection__number">
                         c)
                     </span>
@@ -85,7 +85,7 @@ const Odszkodowania = () => {
 
             <section className="oferta__subsection" ref={o4} id="o4">
                 <h4 className="oferta__subsection__header">
-                    błąd medyczny
+                    Błąd medyczny
                     <span className="oferta__subsection__number">
                         d)
                     </span>
@@ -109,7 +109,7 @@ const Odszkodowania = () => {
 
             <section className="oferta__subsection" ref={o5} id="o5">
                 <h4 className="oferta__subsection__header">
-                    wypadek przy pracy
+                    Wypadek przy pracy
                     <span className="oferta__subsection__number">
                         e)
                     </span>
@@ -128,7 +128,7 @@ const Odszkodowania = () => {
 
             <section className="oferta__subsection" ref={o6} id="o6">
                 <h4 className="oferta__subsection__header">
-                    odwołany/opóźniony lot
+                    Odwołany/opóźniony lot
                     <span className="oferta__subsection__number">
                         f)
                     </span>

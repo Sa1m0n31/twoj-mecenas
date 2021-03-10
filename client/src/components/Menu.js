@@ -32,20 +32,34 @@ const Menu = ({backToFront}) => {
                     window.location.href = "/";
                     return 0;
                 }
-                else {
-                    goToElement = document.querySelector("body");
-                }
+                goToElement = document.querySelector("body");
                 break;
             case 1:
+                if(backToFront) {
+                    window.location.href = "/#oferta";
+                    return 0;
+                }
                 goToElement = document.querySelector("#oferta");
                 break;
             case 2:
+                if(backToFront) {
+                    window.location.href = "/#oNas";
+                    return 0;
+                }
                 goToElement = document.querySelector("#oNas");
                 break;
             case 3:
+                if(backToFront) {
+                    window.location.href = "/#opinie";
+                    return 0;
+                }
                 goToElement = document.querySelector("#opinie");
                 break;
             case 4:
+                if(backToFront) {
+                    window.location.href = "/#kontakt";
+                    return 0;
+                }
                 goToElement = document.querySelector("#kontakt");
                 break;
             default:
